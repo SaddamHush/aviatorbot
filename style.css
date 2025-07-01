@@ -39,18 +39,19 @@ body, html {
   position: relative;
   width: 260px;
   height: 260px;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: visible;
 }
 .progress-ring {
-  position: absolute;
-  top: 0; left: 0;
-  width: 260px;
-  height: 260px;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
   animation: ring-rotate 2s linear infinite;
   transition: filter 0.2s;
 }
