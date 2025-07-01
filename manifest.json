@@ -1,0 +1,25 @@
+{
+  "name": "Aviator Predictor",
+  "short_name": "Aviator Predictor",
+  "description": "Predict Aviator game multipliers with animated progress indicators",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff2d2d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "scope": "/"
+} 

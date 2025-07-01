@@ -1,0 +1,189 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  background: var(--tg-bg-color, #000);
+  color: var(--tg-text-color, #fff);
+}
+.background {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('background.png') no-repeat center center/cover;
+  z-index: 0;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.logo {
+  width: 120px;
+  margin-top: 20px;
+}
+.title {
+  color: #fff;
+  margin: 20px 0 30px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+.circle-progress {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.progress-ring {
+  position: absolute;
+  top: 0; left: 0;
+  width: 260px;
+  height: 260px;
+  z-index: 1;
+  animation: ring-rotate 2s linear infinite;
+  transition: filter 0.2s;
+}
+.circle-progress.loading .progress-ring {
+  animation-play-state: paused;
+}
+@keyframes ring-rotate {
+  100% { transform: rotate(360deg); }
+}
+.progress-ring__bg {
+  fill: none;
+  stroke: #222;
+  opacity: 0.8;
+}
+.progress-ring__arc {
+  fill: none;
+  stroke: #ff2d2d;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px #ff2d2d66) drop-shadow(0 0 2px #ff2d2d44);
+  z-index: 2;
+}
+.progress-ring__bar {
+  fill: none;
+  stroke: #ff2d2d;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 16px #ff2d2d88);
+  z-index: 3;
+  transition: stroke-dashoffset 0.2s linear;
+  opacity: 0;
+}
+.circle-progress.loading .progress-ring__bar {
+  opacity: 1;
+}
+.flying-away, .multiplier {
+  position: absolute;
+  left: 0; right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+.flying-away {
+  top: 90px;
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.multiplier {
+  top: 120px;
+  color: #ff2d2d;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+.telegram-info {
+  color: #fff;
+  font-size: 1rem;
+  margin: 20px 0;
+  text-align: center;
+  opacity: 0.8;
+}
+.handle {
+  color: #2ecc40;
+  font-weight: 500;
+}
+.next-btn {
+  background: linear-gradient(90deg, #ff2d2d 0%, #800020 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+.next-btn:hover {
+  background: linear-gradient(90deg, #e60000 0%, #4b0012 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.next-btn:active {
+  transform: translateY(0);
+}
+.next-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+/* Telegram Mini App specific styles */
+.dark-theme {
+  --tg-bg-color: #1a1a1a;
+  --tg-text-color: #ffffff;
+}
+/* Responsive design for different screen sizes */
+@media (max-height: 700px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-top: 10px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    margin: 15px 0 20px 0;
+  }
+  
+  .circle-progress {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+  }
+  
+  .progress-ring {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .next-btn {
+    padding: 14px 35px;
+    font-size: 1.1rem;
+  }
+}
+/* Safe area support for devices with notches */
+@supports (padding: max(0px)) {
+  .container {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-top: max(20px, env(safe-area-inset-top));
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+} 
