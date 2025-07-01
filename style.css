@@ -47,6 +47,19 @@ body, html {
   padding: 10px;
   overflow: visible;
 }
+.circle-progress-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
 .progress-ring {
   width: 100%;
   height: 100%;
@@ -95,14 +108,17 @@ body, html {
 .flying-away {
   top: 90px;
   color: #bbb;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 0.2em;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 .multiplier {
   top: 120px;
   color: #ff2d2d;
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   font-weight: bold;
+  line-height: 1.1;
 }
 .telegram-info {
   color: #fff;
@@ -148,7 +164,7 @@ body, html {
   --tg-text-color: #ffffff;
 }
 /* Responsive design for different screen sizes */
-@media (max-height: 700px) {
+@media (max-width: 400px), (max-height: 700px) {
   .container {
     padding: 10px;
   }
@@ -164,19 +180,27 @@ body, html {
   }
   
   .circle-progress {
-    width: 220px;
-    height: 220px;
-    margin-bottom: 20px;
+    width: 180px;
+    height: 180px;
+    padding: 6px;
   }
   
   .progress-ring {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
   }
   
   .next-btn {
     padding: 14px 35px;
     font-size: 1.1rem;
+  }
+  
+  .multiplier {
+    font-size: 1.4rem;
+  }
+  
+  .flying-away {
+    font-size: 0.8rem;
   }
 }
 /* Safe area support for devices with notches */
