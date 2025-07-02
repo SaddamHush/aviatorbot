@@ -42,20 +42,22 @@
   <div class="container rocketqueen-theme">
     <div class="header">
       <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back</button>
+    </div>
+    <div class="predictor-block">
       <img src="rocketqueen.avif" alt="Rocket Queen Logo" class="logo">
-    </div>
-    <div class="circle-progress">
-      <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 260 260">
-        <circle class="progress-ring__bg" cx="130" cy="130" r="110" stroke-width="16"/>
-        <circle class="progress-ring__arc" cx="130" cy="130" r="110" stroke-width="16"/>
-        <circle class="progress-ring__bar" cx="130" cy="130" r="110" stroke-width="16"/>
-      </svg>
-      <div class="circle-progress-inner">
-        <span class="flying-away">FLYING AWAY</span>
-        <span class="multiplier" id="multiplier">3.38x</span>
+      <div class="circle-progress">
+        <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 260 260">
+          <circle class="progress-ring__bg" cx="130" cy="130" r="110" stroke-width="16"/>
+          <circle class="progress-ring__arc" cx="130" cy="130" r="110" stroke-width="16"/>
+          <circle class="progress-ring__bar" cx="130" cy="130" r="110" stroke-width="16"/>
+        </svg>
+        <div class="circle-progress-inner">
+          <span class="flying-away">FLYING AWAY</span>
+          <span class="multiplier" id="multiplier">3.38x</span>
+        </div>
       </div>
+      <button class="next-btn" id="nextBtn">Next prediction</button>
     </div>
-    <button class="next-btn" id="nextBtn">Next prediction</button>
   </div>
   <script src="script.js"></script>
 </body>

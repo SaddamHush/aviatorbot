@@ -3,59 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Penalty Shootout Predictor</title>
+  <title>RocketX Predictor</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
-    body.penalty-bg .background {
-      background: url('penaltybg.png') no-repeat center center/cover;
+    body.rocketx-bg .background {
+      background: url('rocketxbg.png') no-repeat center center/cover;
     }
-    .penalty-theme .circle-progress-inner .multiplier {
-      color: #ffeb3b;
-      text-shadow: 0 0 8px #ffeb3b99;
+    .rocketx-theme .circle-progress-inner .multiplier {
+      color: #00ffea;
+      text-shadow: 0 0 8px #00ffea99;
     }
-    .penalty-theme .next-btn {
-      background: linear-gradient(90deg, #43ea4a 0%, #ffeb3b 100%);
+    .rocketx-theme .next-btn {
+      background: linear-gradient(90deg, #00ffea 0%, #3affb3 100%);
       color: #222;
-      box-shadow: 0 4px 16px #43ea4a44;
+      box-shadow: 0 4px 16px #00ffea44;
     }
-    .penalty-theme .next-btn:hover {
-      background: linear-gradient(90deg, #ffeb3b 0%, #43ea4a 100%);
+    .rocketx-theme .next-btn:hover {
+      background: linear-gradient(90deg, #3affb3 0%, #00ffea 100%);
       color: #222;
     }
-    .penalty-theme .flying-away {
-      color: #43ea4a;
-      text-shadow: 0 0 8px #43ea4a99;
+    .rocketx-theme .flying-away {
+      color: #00ffea;
+      text-shadow: 0 0 8px #00ffea99;
     }
-    .penalty-theme .progress-ring__arc {
-      stroke: #43ea4a;
-      filter: drop-shadow(0 0 6px #43ea4a66) drop-shadow(0 0 2px #ffeb3b44);
+    .rocketx-theme .progress-ring__arc {
+      stroke: #00ffea;
+      filter: drop-shadow(0 0 6px #00ffea66) drop-shadow(0 0 2px #00ffea44);
     }
-    .penalty-theme .progress-ring__bar {
-      stroke: #ffeb3b;
-      filter: drop-shadow(0 0 16px #ffeb3b88);
+    .rocketx-theme .progress-ring__bar {
+      stroke: #3affb3;
+      filter: drop-shadow(0 0 16px #3affb388);
     }
   </style>
 </head>
-<body class="penalty-bg">
+<body class="rocketx-bg">
   <div class="background"></div>
-  <div class="container penalty-theme">
+  <div class="container rocketx-theme">
     <div class="header">
       <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back</button>
-      <img src="penaltystreet.avif" alt="Penalty Shootout Logo" class="logo">
     </div>
-    <div class="circle-progress">
-      <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 260 260">
-        <circle class="progress-ring__bg" cx="130" cy="130" r="110" stroke-width="16"/>
-        <circle class="progress-ring__arc" cx="130" cy="130" r="110" stroke-width="16"/>
-        <circle class="progress-ring__bar" cx="130" cy="130" r="110" stroke-width="16"/>
-      </svg>
-      <div class="circle-progress-inner">
-        <span class="flying-away">FLYING AWAY</span>
-        <span class="multiplier" id="multiplier">3.38x</span>
+    <div class="predictor-block">
+      <img src="rocketx.avif" alt="RocketX Logo" class="logo">
+      <div class="circle-progress">
+        <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 260 260">
+          <circle class="progress-ring__bg" cx="130" cy="130" r="110" stroke-width="16"/>
+          <circle class="progress-ring__arc" cx="130" cy="130" r="110" stroke-width="16"/>
+          <circle class="progress-ring__bar" cx="130" cy="130" r="110" stroke-width="16"/>
+        </svg>
+        <div class="circle-progress-inner">
+          <span class="flying-away">FLYING AWAY</span>
+          <span class="multiplier" id="multiplier">3.38x</span>
+        </div>
       </div>
+      <button class="next-btn" id="nextBtn">Next prediction</button>
     </div>
-    <button class="next-btn" id="nextBtn">Next prediction</button>
   </div>
   <script src="script.js"></script>
 </body>

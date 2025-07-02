@@ -20,9 +20,10 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .header {
@@ -78,6 +79,7 @@ body, html {
   box-sizing: border-box;
   padding: 10px;
   overflow: visible;
+  margin-bottom: 8px;
 }
 .circle-progress-inner {
   position: absolute;
@@ -284,4 +286,16 @@ body.aviator-bg .background {
 .crime-theme .progress-ring__bar {
   stroke: #ffd700;
   filter: drop-shadow(0 0 16px #ffd70088);
+}
+
+.predictor-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.predictor-block button {
+  margin-top: 0;
 } 
