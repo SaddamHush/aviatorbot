@@ -6,20 +6,57 @@
   <title>Tropicana Predictor</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body.tropicana-bg .background {
+      background: url('tropicanabg.png') no-repeat center center/cover;
+    }
+    .tropicana-theme .circle-progress-inner .multiplier {
+      color: #00d4ff;
+      text-shadow: 0 0 8px #00d4ff99;
+    }
+    .tropicana-theme .next-btn {
+      background: linear-gradient(90deg, #00d4ff 0%, #1e90ff 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px #00d4ff44;
+    }
+    .tropicana-theme .next-btn:hover {
+      background: linear-gradient(90deg, #1e90ff 0%, #00d4ff 100%);
+      color: #fff;
+    }
+    .tropicana-theme .flying-away {
+      color: #00d4ff;
+      text-shadow: 0 0 8px #00d4ff99;
+    }
+    .tropicana-theme .progress-ring__arc {
+      stroke: #00d4ff;
+      filter: drop-shadow(0 0 6px #00d4ff66) drop-shadow(0 0 2px #00d4ff44);
+    }
+    .tropicana-theme .progress-ring__bar {
+      stroke: #1e90ff;
+      filter: drop-shadow(0 0 16px #1e90ff88);
+    }
+  </style>
 </head>
-<body>
+<body class="tropicana-bg">
   <div class="background"></div>
-  <div class="container">
+  <div class="container tropicana-theme">
     <div class="header">
       <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back</button>
-      <img src="logo.png" alt="Logo" class="logo">
+      <img src="tropicana.avif" alt="Tropicana Logo" class="logo">
     </div>
-    <h1 class="title">Tropicana Predictor</h1>
-    <div class="coming-soon">
-      <h2>Coming Soon!</h2>
-      <p>This predictor is under development.</p>
-      <button class="next-btn" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+    <div class="circle-progress">
+      <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 260 260">
+        <circle class="progress-ring__bg" cx="130" cy="130" r="110" stroke-width="16"/>
+        <circle class="progress-ring__arc" cx="130" cy="130" r="110" stroke-width="16"/>
+        <circle class="progress-ring__bar" cx="130" cy="130" r="110" stroke-width="16"/>
+      </svg>
+      <div class="circle-progress-inner">
+        <span class="flying-away">FLYING AWAY</span>
+        <span class="multiplier" id="multiplier">3.38x</span>
+      </div>
     </div>
+    <button class="next-btn" id="nextBtn">Next prediction</button>
   </div>
+  <script src="script.js"></script>
 </body>
 </html> 

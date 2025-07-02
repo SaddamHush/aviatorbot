@@ -8,13 +8,13 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
+  <div class="winner-notification">
+    <img src="dollar.png" alt="Dollar Icon" class="dollar-icon">
+    <span id="winner-message">Aminata from Lagos just won $2,000!</span>
+  </div>
   <div class="background"></div>
   <div class="container">
     <img src="dashlogo.png" alt="Logo" class="logo">
-    <div class="winner-notification">
-      <img src="dollar.png" alt="Dollar Icon" class="dollar-icon">
-      <span id="winner-message">Aminata from Lagos just won $2,000!</span>
-    </div>
     <h1 class="title">choose your game</h1>
     
     <div class="games-grid">
@@ -54,6 +54,13 @@
         <img src="tropicana.avif" alt="Tropicana" class="game-image">
         <div class="game-overlay">
           <h3 class="game-title">Tropicana</h3>
+          <p class="game-description">Coming Soon</p>
+        </div>
+      </div>
+      <div class="game-card" onclick="window.location.href='penaltystreet.html'">
+        <img src="penaltystreet.avif" alt="Penalty Street" class="game-image">
+        <div class="game-overlay">
+          <h3 class="game-title">Penalty Street</h3>
           <p class="game-description">Coming Soon</p>
         </div>
       </div>

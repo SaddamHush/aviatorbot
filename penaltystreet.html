@@ -3,46 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rocket Queen Predictor</title>
+  <title>Penalty Shootout Predictor</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
-    body.rocketqueen-bg .background {
-      background: url('rocketbg.png') no-repeat center center/cover;
+    body.penalty-bg .background {
+      background: url('penaltybg.png') no-repeat center center/cover;
     }
-    .rocketqueen-theme .circle-progress-inner .multiplier {
-      color: #ffb347;
-      text-shadow: 0 0 8px #ffb34799;
+    .penalty-theme .circle-progress-inner .multiplier {
+      color: #ffeb3b;
+      text-shadow: 0 0 8px #ffeb3b99;
     }
-    .rocketqueen-theme .next-btn {
-      background: linear-gradient(90deg, #ff5ecb 0%, #ffb347 100%);
-      color: #fff;
-      box-shadow: 0 4px 16px #ffb34744;
+    .penalty-theme .next-btn {
+      background: linear-gradient(90deg, #43ea4a 0%, #ffeb3b 100%);
+      color: #222;
+      box-shadow: 0 4px 16px #43ea4a44;
     }
-    .rocketqueen-theme .next-btn:hover {
-      background: linear-gradient(90deg, #ffb347 0%, #ff5ecb 100%);
-      color: #fff;
+    .penalty-theme .next-btn:hover {
+      background: linear-gradient(90deg, #ffeb3b 0%, #43ea4a 100%);
+      color: #222;
     }
-    .rocketqueen-theme .flying-away {
-      color: #ff5ecb;
-      text-shadow: 0 0 8px #ff5ecb99;
+    .penalty-theme .flying-away {
+      color: #43ea4a;
+      text-shadow: 0 0 8px #43ea4a99;
     }
-    .rocketqueen-theme .progress-ring__arc {
-      stroke: #ff5ecb;
-      filter: drop-shadow(0 0 6px #ff5ecb66) drop-shadow(0 0 2px #ffb34744);
+    .penalty-theme .progress-ring__arc {
+      stroke: #43ea4a;
+      filter: drop-shadow(0 0 6px #43ea4a66) drop-shadow(0 0 2px #ffeb3b44);
     }
-    .rocketqueen-theme .progress-ring__bar {
-      stroke: #ffb347;
-      filter: drop-shadow(0 0 16px #ffb34788);
+    .penalty-theme .progress-ring__bar {
+      stroke: #ffeb3b;
+      filter: drop-shadow(0 0 16px #ffeb3b88);
     }
   </style>
 </head>
-<body class="rocketqueen-bg">
+<body class="penalty-bg">
   <div class="background"></div>
-  <div class="container rocketqueen-theme">
+  <div class="container penalty-theme">
     <div class="header">
       <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back</button>
-      <img src="rocketqueen.avif" alt="Rocket Queen Logo" class="logo">
+      <img src="penaltystreet.avif" alt="Penalty Shootout Logo" class="logo">
     </div>
     <div class="circle-progress">
       <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 260 260">

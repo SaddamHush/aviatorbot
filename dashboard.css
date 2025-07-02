@@ -6,6 +6,7 @@ body, html {
   overflow-x: hidden;
   background: #0a1929;
   color: #fff;
+  box-sizing: border-box;
 }
 
 .background {
@@ -22,22 +23,23 @@ body, html {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
   box-sizing: border-box;
   width: 100%;
+  margin-top: 8px;
 }
 
 .logo {
-  width: 120px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  width: 110px;
+  margin-top: 8px;
+  margin-bottom: 6px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 .title {
   color: #fff;
-  margin: 10px 0 30px 0;
-  font-size: 2rem;
+  margin: 10px 0 20px 0;
+  font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -191,22 +193,28 @@ body, html {
 }
 
 .winner-notification {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0 10px 0;
-  padding: 10px 18px;
-  border-radius: 16px;
-  background: rgba(20, 30, 60, 0.35);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-  backdrop-filter: blur(10px);
+  background: rgba(20, 30, 60, 0.7);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  border-radius: 0;
+  padding: 10px 0;
+  margin: 0;
   font-size: 1.05rem;
   font-weight: 500;
   color: #fff;
   min-width: 220px;
-  max-width: 90vw;
   animation: fadeIn 1s;
+  box-sizing: border-box;
 }
 
 .dollar-icon {

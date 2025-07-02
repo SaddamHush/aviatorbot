@@ -270,4 +270,18 @@ body, html {
     padding-top: max(20px, env(safe-area-inset-top));
     padding-bottom: max(20px, env(safe-area-inset-bottom));
   }
+}
+
+body.aviator-bg .background {
+  background: url('aviatorbg.png') no-repeat center center/cover;
+}
+
+.crime-theme .progress-ring__arc {
+  stroke: #ffd700;
+  filter: drop-shadow(0 0 6px #ffd70066) drop-shadow(0 0 2px #ffd70044);
+}
+
+.crime-theme .progress-ring__bar {
+  stroke: #ffd700;
+  filter: drop-shadow(0 0 16px #ffd70088);
 } 
