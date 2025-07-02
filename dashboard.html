@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Predictors Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <img src="dashlogo.png" alt="Logo" class="logo">
+    <div class="winner-notification">
+      <img src="dollar.png" alt="Dollar Icon" class="dollar-icon">
+      <span id="winner-message">Aminata from Lagos just won $2,000!</span>
+    </div>
+    <h1 class="title">choose your game</h1>
+    
+    <div class="games-grid">
+      <div class="game-card" onclick="window.location.href='index.html'">
+        <img src="aviator.avif" alt="Aviator" class="game-image">
+        <div class="game-overlay">
+          <h3 class="game-title">Aviator</h3>
+          <p class="game-description">Predict the multiplier</p>
+        </div>
+      </div>
+      
+      <div class="game-card" onclick="window.location.href='crimeempire.html'">
+        <img src="crimeempire.avif" alt="Crime Empire" class="game-image">
+        <div class="game-overlay">
+          <h3 class="game-title">Crime Empire</h3>
+          <p class="game-description">Coming Soon</p>
+        </div>
+      </div>
+      
+      <div class="game-card" onclick="window.location.href='jetx.html'">
+        <img src="jetx.avif" alt="JetX" class="game-image">
+        <div class="game-overlay">
+          <h3 class="game-title">JetX</h3>
+          <p class="game-description">Coming Soon</p>
+        </div>
+      </div>
+      
+      <div class="game-card" onclick="window.location.href='rocketqueen.html'">
+        <img src="rocketqueen.avif" alt="Rocket Queen" class="game-image">
+        <div class="game-overlay">
+          <h3 class="game-title">Rocket Queen</h3>
+          <p class="game-description">Coming Soon</p>
+        </div>
+      </div>
+      
+      <div class="game-card" onclick="window.location.href='tropicana.html'">
+        <img src="tropicana.avif" alt="Tropicana" class="game-image">
+        <div class="game-overlay">
+          <h3 class="game-title">Tropicana</h3>
+          <p class="game-description">Coming Soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 

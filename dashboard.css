@@ -1,0 +1,228 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background: #0a1929;
+  color: #fff;
+}
+
+.background {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('dash.png') no-repeat center center/cover;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.logo {
+  width: 120px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.title {
+  color: #fff;
+  margin: 10px 0 30px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+  font-family: 'HORIZON', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  justify-items: center;
+}
+
+.game-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 95%;
+  max-width: 320px;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-card:active {
+  transform: translateY(-4px);
+}
+
+.game-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.game-overlay {
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+.game-title {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.game-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-top: 15px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    margin: 10px 0 25px 0;
+  }
+  
+  .games-grid {
+    gap: 15px;
+    padding: 0 5px;
+  }
+  
+  .game-image {
+    height: 120px;
+  }
+  
+  .game-overlay {
+    padding: 12px;
+  }
+  
+  .game-title {
+    font-size: 1.1rem;
+  }
+  
+  .game-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+  
+  .game-image {
+    height: 160px;
+  }
+}
+
+/* Animation for cards */
+.game-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.game-card:nth-child(1) { animation-delay: 0.1s; }
+.game-card:nth-child(2) { animation-delay: 0.2s; }
+.game-card:nth-child(3) { animation-delay: 0.3s; }
+.game-card:nth-child(4) { animation-delay: 0.4s; }
+.game-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Telegram Mini App specific styles */
+.dark-theme {
+  --tg-bg-color: #0a1929;
+  --tg-text-color: #ffffff;
+}
+
+@font-face {
+  font-family: 'HORIZON';
+  src: url('HORIZON.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.winner-notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 10px 0;
+  padding: 10px 18px;
+  border-radius: 16px;
+  background: rgba(20, 30, 60, 0.35);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+  min-width: 220px;
+  max-width: 90vw;
+  animation: fadeIn 1s;
+}
+
+.dollar-icon {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 8px #ffd700cc) drop-shadow(0 0 2px #fff8dc);
+  animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+  0% { filter: drop-shadow(0 0 8px #ffd700cc) drop-shadow(0 0 2px #fff8dc); }
+  50% { filter: drop-shadow(0 0 16px #fff700) drop-shadow(0 0 8px #fff8dc); }
+  100% { filter: drop-shadow(0 0 8px #ffd700cc) drop-shadow(0 0 2px #fff8dc); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+} 

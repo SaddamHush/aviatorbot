@@ -24,6 +24,36 @@ body, html {
   padding: 20px;
   box-sizing: border-box;
 }
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
 .logo {
   width: 120px;
   margin-top: 20px;
@@ -158,6 +188,35 @@ body, html {
   cursor: not-allowed;
   transform: none;
 }
+/* Coming Soon styles */
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.coming-soon h2 {
+  color: #ff2d2d;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.coming-soon p {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
 /* Telegram Mini App specific styles */
 .dark-theme {
   --tg-bg-color: #1a1a1a;
